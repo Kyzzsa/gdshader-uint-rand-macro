@@ -34,7 +34,7 @@ func _run() -> void:
 				@warning_ignore("integer_division")
 				impl_rand(i, j, k / 2, k % 2, buffer)
 
-	var path := (self.get_script() as Script).get_path().get_base_dir() + "/rng.gdshaderinc"
+	var path := (self.get_script() as Script).get_path().get_base_dir() + "/int_rand.gdshaderinc"
 
 	var file := FileAccess.open(path, FileAccess.WRITE)
 
