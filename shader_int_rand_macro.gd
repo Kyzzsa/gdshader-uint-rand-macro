@@ -28,13 +28,13 @@ const INCLUDE: Array[String] = [
 func _run() -> void:
 	var buffer: Array[String] = INCLUDE.duplicate()
 
-	for i in range(1, 4):
-		for j in range(1, 4):
+	for i in range(1, 5):
+		for j in range(1, 5):
 			for k in 4:
 				@warning_ignore("integer_division")
 				impl_rand(i, j, k / 2, k % 2, buffer)
 
-	var path := (self.get_script() as Script).get_path().get_base_dir() + "/int_rand.gdshaderinc"
+	var path := (self.get_script() as Script).get_path().get_base_dir() + "/rng.gdshaderinc"
 
 	var file := FileAccess.open(path, FileAccess.WRITE)
 
